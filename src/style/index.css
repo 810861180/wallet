@@ -1,0 +1,88 @@
+@import './login.css';
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.main_bg{
+    background: linear-gradient(to bottom,rgb(57, 57, 73),rgb(34, 34, 44));
+    width: 100vw;
+    height: 100vh;
+}
+.test_color{
+    height: 100%;
+}
+.card_bg{
+    width: 90%;
+    min-height: 12.5rem;
+    border-radius: .625rem;
+    /* box-shadow: 5px 5px 5px #888888; */
+    margin: 3.125rem auto 0 auto;
+    background: #393949;
+}
+.footer{
+        background-image:linear-gradient(-45deg, rgb(195, 101, 204), rgb(131, 98, 231));
+        width: 3.75rem;
+        height: 3.75rem;
+        border-radius: 1.875rem;
+        position: absolute;
+        left: calc(50% - 1.875rem);
+        bottom: -1.875rem;
+        text-align: center;
+}
+    .footer_i{
+        padding-top: .625rem;
+        text-align: center;
+    }
+    .footer_p{
+        margin-top: 1.25rem;
+        font-size: .875rem;
+        color: grey;
+    }
+
+/* 顶部功能栏 */
+    .topNav_div{
+        height: 2.5rem;
+        width: 96%;
+        margin: 0 auto;
+        padding: .625rem;
+        display: flex;
+    }
+    .topNav_div_son{
+        flex: 1;
+        height: 100%;
+    }
+    .topNav_div_son:nth-child(1){
+        text-align: left;
+    }
+    .topNav_div_son:nth-child(2){
+        text-align: center;
+    }
+    .topNav_div_son:nth-child(3){
+        text-align: right;
+    }
+    .topNav_div img{
+        display: inline-block;
+        width: 1.75rem;
+    }
+    .topNav_h1{
+        display: inline-block;
+        color:white;
+        font-weight: 500;
+        font-size: 1.375rem;
+        margin-top: -3px
+    }
+
+/**/
+.ivu-input{
+    height: 2.5rem!important;
+    font-size: 1rem!important;
+}
+.ivu-input-prefix i, .ivu-input-suffix i{
+    line-height: 2.5rem!important;
+    font-size: 1.5rem!important;
+}
+
+
+

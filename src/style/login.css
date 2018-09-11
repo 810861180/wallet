@@ -1,0 +1,69 @@
+/*login style */
+.login_input{
+    margin-top: 1.25rem;
+    border: 0;
+    height: 2.5rem;
+    width: 80%;
+    border-radius: 1.25rem;
+    outline: none;
+    font-size: 1.125rem;
+    padding-left: 1.25rem;
+}
+.ivu-radio-inner:after{
+    background: grey!important;
+}
+
+
+    .div{
+        width: 100%;
+        /* height: 100%; */
+    }
+    .top{
+        text-align: center;
+        padding-top: 3.75rem;
+        color: white;
+    }
+    .top p{
+        display: inline-block;
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+    .log_in{
+        margin-right: 2.5rem;
+    }
+    .sign_in{
+        margin-left: 2.5rem;
+    }
+    .main{
+        width: 80%;
+        height: 60%;
+        background: rgb(57, 57, 73);
+        border-radius: .625rem;
+        margin: 1.25rem auto 0 auto;
+        position: relative;
+    }
+    .main_top{
+        text-align: center;
+        padding-top: 1.25rem;
+    }
+    .main_account{
+        top:2.9375rem;
+        left:2.4375rem;
+    }
+    .main_password{
+        top:6.75rem;
+        left:2.4375rem;
+    }
+    .main_chx{
+        width: 80%;
+        margin: 1.25rem auto 3rem auto;
+        color: grey;
+    }
+    .main_chx div{
+        display: inline-block;
+        width: 49%;
+    }
+    .main_chx_right{
+        text-align: right;
+    }
+
