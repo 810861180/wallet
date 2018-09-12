@@ -23,3 +23,17 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+// router.beforeEach((to, from, next) => {
+//   const nextRoute = 'login'
+//   if (nextRoute.indexOf(to.name) >= 0) {
+//     next()
+//   } else {
+//     if (store.state.status) {
+//       next()
+//     } else {
+//       store.commit('saveLoginFalse')
+//       return false
+//     }
+//   }
+// })

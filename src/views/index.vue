@@ -38,11 +38,7 @@ export default {
                     {id:2, name:'ETH', value:'78782.22'},
                     {id:3, name:'ETH', value:'78782.22'},
                     {id:4, name:'ETH', value:'78782.22'}
-                ],
-                btnShow:{
-                    btnT:true,
-                    btnF:false
-                }
+                ]
             }
         }
         

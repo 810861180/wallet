@@ -77,10 +77,6 @@ export default {
                 singinData:{
                     newUsername:'',
                     newPassword:''
-                },
-                userInfo: {
-                    user:null,
-                    password:null
                 }
             }
     },
@@ -98,13 +94,16 @@ export default {
         },
         // 注册方法
         singins() {
+            let obj = {
+                name:this.singinData.newUsername,
+                password:this.singinData.newPassword
+            }
             if (this.singinData.newUsername != '' && this.singinData.newPassword != '') {
                 if (this.singinRadio === true) {
-                    this.userInfo.user = this.singinData.newUsername
-                    this.userInfo.password = this.singinData.newPassword
+                    this.$store.commit('saveUserInfo',obj)
                     this.singinData.newUsername = ''
                     this.singinData.newPassword = ''
-                    this.$Message.success('注册成')
+                    this.$Message.success('注册成功')
                     this.loginfn()
                 }else{
                     this.$Message.warning('请同意用户协议')
@@ -116,11 +115,13 @@ export default {
         // 登陆方法
         logins() {
             if(this.loginData.username != '' && this.loginData.password != ''){
-                if (this.loginData.username === this.userInfo.user && this.loginData.password === this.userInfo.password) {
-                    this.$router.push('/index')
-                    this.$Message.success('登录成功')
-                    let token = 123456
-                    this.$store.commit('token', {user: token})
+                if (this.loginData.username === this.$store.state.name && this.loginData.password === this.$store.state.password) {
+                    window.localStorage.setItem('token','1273892179387128937')
+                    this.$store.commit('saveLoginStatus')
+                    if (this.$store.state.status) {
+                        this.$router.push('/index')
+                        this.$Message.success('登录成功')
+                    }
                 }else{
                     this.$Message.error('用户名或密码错误')
                 }

@@ -53,6 +53,48 @@ export default new Router({
       name: 'AboutUS',
       component: resolve => require(['@/views/my/aboutUS'], resolve)
     },
+    // 钱包详情
+    {
+      path: '/my/manage/details',
+      name: 'walletDetails',
+      component: resolve => require(['@/views/my/walletDetails'], resolve)
+    },
+    // 钱包详情(！修改名称)
+    {
+      path: '/my/manage/details/alert',
+      name: 'alertName',
+      component: resolve => require(['@/views/my/walletDetailss/alterName'], resolve)
+    },
+    // 钱包详情(！修改密码)
+    {
+      path: '/my/manage/details/changePassword',
+      name: 'changePassword',
+      component: resolve => require(['@/views/my/walletDetailss/changePassword'], resolve)
+    },
+    // 钱包详情(！导出KEY)
+    {
+      path: '/my/manage/details/deriveKey',
+      name: 'deriveKey',
+      component: resolve => require(['@/views/my/walletDetailss/deriveKey'], resolve)
+    },
+    // 钱包详情(！导出私钥)
+    {
+      path: '/my/manage/details/privateKey',
+      name: 'privateKey',
+      component: resolve => require(['@/views/my/walletDetailss/privateKey'], resolve)
+    },
+    // 管理钱包(！创建钱包)
+    {
+      path: '/my/establishWallet/foundWallet',
+      name: 'foundWallet',
+      component: resolve => require(['@/views/my/establishWallet/foundWallet'], resolve)
+    },
+    // 管理钱包(！导入钱包)
+    {
+      path: '/my/establishWallet/leadWallet',
+      name: 'leadWallet',
+      component: resolve => require(['@/views/my/establishWallet/leadWallet'], resolve)
+    },
     /** 锁仓钱包 **/
     {
       path: '/wallet',

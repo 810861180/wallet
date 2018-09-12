@@ -8,7 +8,7 @@
                     <div class="list_div">{{ item.value }}</div>
                 </li>
             </ul>
-            <div class="footer" v-show="Rxd.btnShow.btnT">
+            <div class="footer" v-show="true">
                 <div class="footer_i">
                     <img src="@/assets/add.svg" alt="" class="footerImg">
                 </div>

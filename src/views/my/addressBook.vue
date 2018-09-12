@@ -16,10 +16,10 @@
             <div class="addressList">
                 <ul class="address_ui">
                     <li class="address_li" v-for="item in addressInfo" :key="item.id">
-                        <img src="@/assets/addressInfo.svg" alt="" class="img_1" v-show="item.img === '' ">
-                        <img :src="item.img" v-show="item.img !== '' " class="img_1 img2">
-                        <span class="span_1">{{ item.name }}</span>
-                        <span class="span_2">{{ item.phone }}</span>
+                        <img src="@/assets/addressInfo.svg" alt="" class="addressList_img_1" v-show="item.img === '' ">
+                        <img :src="item.img" v-show="item.img !== '' " class="addressList_img_1 addressList_img2">
+                        <span class="addressList_span_1">{{ item.name }}</span>
+                        <span class="addressList_span_2">{{ item.phone }}</span>
                     </li>
                 </ul>
             </div>
@@ -56,45 +56,6 @@ export default {
         width: 90%;
         margin: 1.875rem auto 0 auto;
         background: #353544;
-    }
-    .address_ui{
-        margin-top: 1.25rem;
-    }
-    .img_1{
-        width: 3rem;
-    }
-    .img2{
-        overflow: hidden;
-        border-radius: 1.5rem;
-    }
-    .address_li{
-        position: relative;
-        height: 4.375rem;
-    }
-    .address_li:hover{
-        background: #393949;
-    }
-    .address_li img{
-        position: absolute;
-        top: .6875rem;
-        left: 1.25rem;
-    }
-    .span_1{
-        font-size: 1rem;
-        color: white;
-        font-weight: 500;
-        display: inline-block;
-        position: absolute;
-        top: .75rem;
-        left: 5rem;
-    }
-    .span_2{
-        font-size: .8125rem;
-        color: #8a8a8a;
-        display: inline-block;
-        position: absolute;
-        bottom: .75rem;
-        left: 5rem;
     }
     .addressBtn{
         position: fixed;

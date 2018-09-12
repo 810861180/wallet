@@ -2,34 +2,29 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
-const key = 'user'
 const store = new Vuex.Store({
-    state() {
-        return {
-            user: null
-        }
+  state: {
+    name: '',
+    password: '',
+    status: false,
+    walletName: '小链一号'
+  },
+  getters: {},
+  mutations: {
+    saveUserInfo (state, obj) {
+      state.name = obj.name
+      state.password = obj.password
     },
-    getters: {
-        getStorage: function (state) {
-            if (!state.user) {
-                state.user = JSON.parse(localStorage.getItem(key))
-            }
-            return state.user
-        }
+    saveLoginStatus (state) {
+      state.status = true
     },
-    mutations: {
-        // aaaa(state,name){
-        //     state.name = name
-        // },
-        $_setStorage(state, value) {
-            state.user = value
-            localStorage.setItem(key, JSON.stringify(value))
-        },
-        $_removeStorage(state) {
-            state.user = null
-            localStorage.removeItem(key)
-        }
+    saveLoginFalse (state) {
+      state.status = false
+    },
+    altername (state, eisodic) {
+      state.walletName = eisodic
     }
+  }
 })
 
 export default store

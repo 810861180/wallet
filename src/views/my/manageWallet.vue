@@ -22,10 +22,10 @@
                 </div>
             </div>
             <div class="wallet_btn">
-                <div class="btn_1">
+                <div class="btn_1" @click="$router.push({name:'foundWallet'})">
                     创建钱包
                 </div>
-                <div class="btn_2">
+                <div class="btn_2" @click="$router.push({name:'leadWallet'})">
                     导入钱包
                 </div>
             </div>

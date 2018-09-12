@@ -1,0 +1,40 @@
+/* 通讯录结构样式 */
+.address_ui{
+        margin-top: 1.25rem;
+    }
+    .addressList_img_1{
+        width: 3rem;
+    }
+    .addressList_img2{
+        overflow: hidden;
+        border-radius: 1.5rem;
+    }
+    .address_li{
+        position: relative;
+        height: 4.375rem;
+    }
+    .address_li:hover, .about_li:hover{
+        background: #393949;
+    }
+    .address_li img{
+        position: absolute;
+        top: .6875rem;
+        left: 1.25rem;
+    }
+    .addressList_span_1{
+        font-size: 1rem;
+        color: white;
+        font-weight: 500;
+        display: inline-block;
+        position: absolute;
+        top: .75rem;
+        left: 5rem;
+    }
+    .addressList_span_2{
+        font-size: .8125rem;
+        color: #8a8a8a;
+        display: inline-block;
+        position: absolute;
+        bottom: .75rem;
+        left: 5rem;
+    }

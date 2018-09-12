@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="card_div" :style="{background:Rxd.bgColor}">
+        <div class="card_div" :style="{background:Rxd.bgColor}" @click="nextPath">
             <div class="circle"></div>
             <img src="@/assets/circle.svg" alt="" class="circle2">
             <span class="span_1">{{ Rxd.text }}</span>
@@ -15,6 +15,13 @@
 export default {
     props:{
         Rxd:Object
+    },
+    methods:{
+        nextPath() {
+            if (this.$router.path !== '/my/manage/details') {
+                this.$router.push({name:'walletDetails', query:this.Rxd})
+            }
+        }
     }
 }
 </script>
