@@ -18,7 +18,7 @@
                             <Radio v-model="radios">我已经仔细阅读并同意 服务与隐私条款</Radio>
                         </div>
                     </div>
-                    <div class="footer">
+                    <div class="footer" @click="$router.push({name:'ManageWallet'})">
                         <div class="footer_i">
                             <Icon type="md-arrow-round-forward" color="white" size="40" />
                         </div>

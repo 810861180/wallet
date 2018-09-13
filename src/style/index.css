@@ -5,6 +5,9 @@ body{
     margin: 0;
     padding: 0;
 }
+li{
+    list-style: none;
+}
 /* 长条按钮 */
 .strip_btn{
         height: 2.75rem;
@@ -23,7 +26,7 @@ body{
 .main_bg{
     background: linear-gradient(to bottom,rgb(57, 57, 73),rgb(34, 34, 44));
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 .test_color{
     height: 100%;
@@ -158,4 +161,97 @@ body{
         font-size: 1rem;
         outline: none;
         color:#999999;
+    }
+
+/* 顶部切换并且中间带 | */
+.leadCut{
+        width: 80%;
+        height: 2.5rem;
+        margin: 1.875rem auto 0 auto;
+        border-radius: .625rem;
+        background: #393949;
+        box-shadow: #22222C 0px 0px 10px;
+        display: flex;
+    }
+    .leadCut_1, .leadCut_2{
+        font-size: .875rem;
+        height: 1.25rem;
+        text-align: center;
+        margin-top: .625rem;
+        color: #999999;
+    }
+    .leadCut_1{
+        flex: 1;
+        border-right: 1px solid #999999;
+    }
+    .leadCut_2{
+        flex: 1;
+    }
+
+/* 抽屉 */
+.ivu-drawer-body{
+    padding: 0 !important;
+    padding-top: 1.25rem !important;
+    background: #696969 !important;
+}
+
+/*  修改联系和添加联系人  */
+.linkman_div{
+        width: 80%;
+        margin: 1.875rem auto 0 auto;
+    }
+    .linkman_div ul{
+        padding-bottom: 6.25rem;
+    }
+    .linkman_div_li{
+        width: 100%;
+    }
+    .linkman_div_p{
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        text-align: center;
+        margin-bottom: .625rem;
+    }
+    .linkman_div_input{
+        width: 100%;
+        margin-bottom: .625rem;
+        height: 2.5rem;
+        border-radius: .625rem;
+        font-size: 1rem;
+        border: 0;
+        padding-left: .625rem;
+        outline: none;
+        background: #393949;
+        color: #999999;
+    }
+    .input_head{
+        height: 9.375rem;
+        padding-top: .625rem;
+    }
+
+/* 两大并行按钮 */
+.wallet_btn{
+        height: 3.125rem;
+        width: 100%;
+        position: fixed;
+        bottom: 3.125rem;
+        z-index: 10;
+        display: flex;
+    }
+    .btn_1, .btn_2{
+        display: inline-block;
+        height: 2.875rem;
+        width: 7.6875rem;
+        margin: .125rem 0 0 3.25rem;
+        border-radius: 1.4375rem;
+        text-align: center;
+        line-height: 2.875rem;
+        font-size: 1rem;
+        color: white;
+        background-image: -webkit-linear-gradient(0deg, rgb(195, 101, 204), rgb(131, 98, 231)); 
+    }
+    .btn_2{
+        margin-left: 1.1rem;
+        background-image: -webkit-linear-gradient(0deg, rgb(73, 81, 254), rgb(45, 119, 255)); 
     }

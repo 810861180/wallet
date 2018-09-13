@@ -2,13 +2,13 @@
     <div>
         <div class="eth_list">
             <ul class="list_ul">
-                <li class="list_li" v-for="item in Rxd.data" :key="item.id" @click="toDeal">
+                <li class="list_li" v-for="item in Rxd.data" :key="item.id" @click="$router.push({name:'tradingRecord'})">
                     <Icon type="logo-bitcoin" size="40" color="#999999" />
                     <span class="list_span">{{ item.name }}</span>
                     <div class="list_div">{{ item.value }}</div>
                 </li>
             </ul>
-            <div class="footer" v-show="true">
+            <div class="footer" v-show="true" @click="$router.push({name:'tradingRecord'})">
                 <div class="footer_i">
                     <img src="@/assets/add.svg" alt="" class="footerImg">
                 </div>
@@ -21,11 +21,6 @@
 export default {
     props:{
         Rxd:Object
-    },
-    methods:{
-        toDeal() {
-            this.$router.push({name:'Deal'})
-        }
     }
 }
 </script>

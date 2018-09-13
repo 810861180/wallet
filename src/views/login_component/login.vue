@@ -118,6 +118,8 @@ export default {
                 if (this.loginData.username === this.$store.state.name && this.loginData.password === this.$store.state.password) {
                     window.localStorage.setItem('token','1273892179387128937')
                     this.$store.commit('saveLoginStatus')
+                    // this.$store.commit('pushCard')
+                    // console.log(this.$store.state.card)
                     if (this.$store.state.status) {
                         this.$router.push('/index')
                         this.$Message.success('登录成功')

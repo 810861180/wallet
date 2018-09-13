@@ -15,7 +15,7 @@
             </div>
             <div class="addressList">
                 <ul class="address_ui">
-                    <li class="address_li" v-for="item in addressInfo" :key="item.id">
+                    <li class="address_li" v-for="item in addressInfo" :key="item.id" @click="drawer = true">
                         <img src="@/assets/addressInfo.svg" alt="" class="addressList_img_1" v-show="item.img === '' ">
                         <img :src="item.img" v-show="item.img !== '' " class="addressList_img_1 addressList_img2">
                         <span class="addressList_span_1">{{ item.name }}</span>
@@ -23,8 +23,15 @@
                     </li>
                 </ul>
             </div>
-            <div class="addressBtn">
+            <div class="addressBtn" @click="$router.push({name:'linkman'})">
                 <img src="@/assets/addContacts.svg" alt="">
+            </div>
+
+            <div>
+                <Drawer :closable="false" v-model="drawer">
+                    <p class="drawer_p1" @click="$router.push({name:'alertLinkman'})">编辑联系人</p>
+                    <p class="drawer_p2">发送消息</p>
+                </Drawer>
             </div>
         </div>
     </div>
@@ -34,6 +41,7 @@
 export default {
     data() {
         return{
+            drawer:false,
             searchValue:'',
             addressInfo:[
                 {id:1, img:'../../.././static/hdPhoto.jpg', name:'张三', phone:'l21j3l123lnln13'},
@@ -71,5 +79,17 @@ export default {
     .addressBtn img{
         width: 1.875rem;
         margin-top: 1.25rem;
+    }
+    .drawer_p1, .drawer_p2{
+        height: 3.125rem;
+        width: 100%;
+        font-size: 1.25rem;
+        text-align: center;
+        line-height: 3.125rem;
+        margin-bottom: .125rem;
+        background:WhiteSmoke;
+    }
+    .drawer_p1:hover, .drawer_p2:hover{
+        background: Silver;
     }
 </style>

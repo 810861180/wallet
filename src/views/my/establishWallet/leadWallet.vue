@@ -41,7 +41,7 @@
                     </div>
                 </div>
 
-                <div class="footer">
+                <div class="footer" @click="$router.push({name:'ManageWallet'})">
                     <div class="footer_i">
                         <Icon type="md-arrow-round-forward" color="white" size="40" />
                     </div>
@@ -64,7 +64,7 @@
                     <div class="footer_i">
                         <Icon type="md-arrow-round-forward" color="white" size="40" />
                     </div>
-                    <p class="footer_p foots11">点击导入</p>
+                    <p class="footer_p foots11" @click="$router.push({name:'ManageWallet'})">点击导入</p>
                 </div>
             </div>
 
@@ -99,7 +99,7 @@ export default {
 </script>
 
 <style scoped>
-    .leadCut{
+    /* .leadCut{
         width: 80%;
         height: 2.5rem;
         margin: 1.875rem auto 0 auto;
@@ -121,7 +121,7 @@ export default {
     }
     .leadCut_2{
         flex: 1;
-    }
+    } */
     .color{
         color: white;
     }

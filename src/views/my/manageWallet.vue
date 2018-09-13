@@ -3,7 +3,7 @@
         <div class="main_bg test_color">
             <div class="topNav_div">
                 <div class="topNav_div_son">
-                    <img src="@/assets/nav/left.svg" alt="" class="img1" @click="$router.go(-1)">
+                    <img src="@/assets/nav/left.svg" alt="" class="img1" @click="$router.push({name:'My'})">
                 </div>
                 <div class="topNav_div_son">
                     <h1 class="topNav_h1">管理钱包</h1>
@@ -61,7 +61,7 @@ export default {
     .wallet_div_3{
         padding-bottom: 12.5rem;
     }
-    .wallet_btn{
+    /* .wallet_btn{
         height: 3.125rem;
         width: 100%;
         position: fixed;
@@ -84,5 +84,5 @@ export default {
     .btn_2{
         margin-left: 1.1rem;
         background-image: -webkit-linear-gradient(0deg, rgb(73, 81, 254), rgb(45, 119, 255)); 
-    }
+    } */
 </style>

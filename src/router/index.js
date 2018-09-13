@@ -17,11 +17,35 @@ export default new Router({
       name: 'Index',
       component: resolve => require(['@/views/index'], resolve)
     },
+    // 交易记录
+    {
+      path: '/index/tradingRecord',
+      name: 'tradingRecord',
+      component: resolve => require(['@/views/property/tradingRecord'], resolve)
+    },
     // 交易详情
     {
       path: '/index/deal',
       name: 'Deal',
       component: resolve => require(['@/views/property/deal'], resolve)
+    },
+    // 交易记录（! 转账）
+    {
+      path: '/index/tradingRecord/transfer',
+      name: 'transfer',
+      component: resolve => require(['@/views/property/transfer'], resolve)
+    },
+    // 交易记录（! 转账-确认密码）
+    {
+      path: '/index/tradingRecord/verifyPassword',
+      name: 'verifyPassword',
+      component: resolve => require(['@/views/property/verifyPassword'], resolve)
+    },
+    // 交易记录（! 收款）
+    {
+      path: '/index/tradingRecord/gathering',
+      name: 'gathering',
+      component: resolve => require(['@/views/property/gathering'], resolve)
     },
     /** 我的 **/
     {
@@ -40,6 +64,18 @@ export default new Router({
       path: '/my/addressBook',
       name: 'AddressBook',
       component: resolve => require(['@/views/my/addressBook'], resolve)
+    },
+    // 通讯录(！添加联系人)
+    {
+      path: '/my/addressBook/linkman',
+      name: 'linkman',
+      component: resolve => require(['@/views/my/linkman'], resolve)
+    },
+    // 通讯录(！修改联系人)
+    {
+      path: '/my/addressBook/alertLinkman',
+      name: 'alertLinkman',
+      component: resolve => require(['@/views/my/alertLinkman'], resolve)
     },
     // 通知公告
     {
@@ -106,6 +142,12 @@ export default new Router({
       path: '/info',
       name: 'Info',
       component: resolve => require(['@/views/information/information'], resolve)
+    },
+    // 资讯详情
+    {
+      path: '/info/details',
+      name: 'details',
+      component: resolve => require(['@/views/information/infromSon'], resolve)
     }
   ]
 })

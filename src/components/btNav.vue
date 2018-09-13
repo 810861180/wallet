@@ -9,7 +9,7 @@
             <router-link class="div" :to="{name:'Wallet'}">
                 <img src="@/assets/wallet.svg" v-show="'/wallet' !== $route.path">
                 <img src="@/assets/walletC.svg" v-show="'/wallet' === $route.path">
-                <p :class="{colors: '/wallet' === $route.path}">钱包</p>
+                <p :class="{colors: '/wallet' === $route.path}">锁仓钱包</p>
             </router-link>
             <router-link class="div" :to="{name:'Info'}">
                 <img src="@/assets/information.svg" v-show="'/info' !== $route.path">
@@ -34,11 +34,11 @@ export default {
 <style scoped>
     .nav{
         background: rgb(57, 57 ,73);
-        width: 90%;
+        width: 92%;
         height: 3.4375rem;
         position: fixed;
         bottom: 1.25rem;
-        left: 5%;
+        left: 4%;
         z-index: 999;
         border-radius: .625rem;
         display: flex;
